@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrapCustomization/main.css"> <!--Update of bootstrap file-->
+    <link rel="stylesheet" href="style.css">
+    <title>Les Ailes Benessoises</title>
+</head>
+<body>
+    <div class="container-fluid">
+        
+        <!--Menu-->
+        <div class="row fixed-top">
+           <div class="col-12">
+               <!-- Déclaration du composant -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary navbar-fixed-top">
+
+                <!-- Titre de la page -->
+                <a class="navbar-brand" href="./index.html">Les Ailes Benessoises</a>
+                <div class="collapse navbar-collapse">
+
+                    <!-- Elements du menu -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- Elements du menu -->
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./index.html">L'association</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./evenement.html">Evènements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./travaux.html">Travaux</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Adresse</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+           </div>
+        </div>
+
+        <!--Page accueil-->
+        
+            <div class="row">
+                
+               <article class="col-12 col-md-6">
+                   <h1>Devenir adhérent</h1>
+                   <h2>Adhésion et renouvellement d'adhésion 2022</h2>
+
+                        <!--Saisie Adresse Email-->
+                    <section class="mb-3">
+                        <label for="EmailAdherant" class="form-label">Saisissez votre adresse Email :</label>
+                        <input type="email" class="form-control" id="EmailAdherant" placeholder="name@example.com">
+                    </section>
+
+                        <!--Selection adhésion-->
+                    <section class="mb-3">
+                        <select class="form-select" aria-label="SelectAdhesion">
+                            <option selected>Selectionnez type adhésion</option>
+                            <option value="1">Adulte 20€</option>
+                            <option value="2">Enfant 5€</option>
+                        </select>
+                    </section>
+                        <!--Payment selection-->
+                    <section class="mb-3">
+                        <label for="RadioTypePayment^Check" class="form-label">Sélectionnez un moyen de paiment :</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="RadioTypePayment" id="RadioTypePaymentCheck" value="Check">
+                            <label class="form-check-label" for="RadioTypePaymentCheck">
+                                Paiement par chèque à l'ordre des ailes bénesssoises au 38 rue fleur 40180 Benèsse Les Dax
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="RadioTypePayment" id="RadioTypePaymentWire" value="Wire">
+                            <label class="form-check-label" for="RadioTypePaymentWire">
+                                Paiement par virement (libellé : Adhésion Moulin 2022) IBAN FR76 1234 5678 6543 5679 5433
+                            </label>
+                        </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="radio" name="RadioTypePayment" id="RadioTypePaymentCash" value="Cash">
+                            <label class="form-check-label" for="RadioTypePaymentCash">
+                                Paiement en espèces à remettre en main propre au  38 rue fleur 40180 Benèsse Les Dax
+                            </label>
+                        </div>
+                    </section>
+                    
+                        <!--Texte libre-->
+                    <section class="mb-3">
+                        <label for="CommentaireAdherent" class="form-label">Commentaires :</label>
+                        <textarea class="form-control" id="CommentaireAdherent" rows="3"></textarea>
+                    </section>
+                    <section class="mb-3">
+                        <p>Le prix de l’adhésion ou don à l’association, 
+                            vous donnera droit à une défiscalisation de 66% des montants versés.
+                        </p>
+                    </section>
+                    <button type="button" class="btn btn-outline-primary">Confirmez votre adhésion</button>
+
+               </article>
+           </div>
+        </div> 
+    </div>
+</body>
+</html>
