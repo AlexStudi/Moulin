@@ -4,237 +4,279 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Lien bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../bootstrapCustomization/main.css"> <!--Update of bootstrap file-->
+    <link rel="stylesheet" href="style.css">
     <title>Les Ailes Benessoises</title>
 </head>
-<body>
-    <div class="container">
+<body class="backgroundMain">
+    <div class="container-fluid">
         
-        <!--Menu-->
-        <!--TODO fixer la barre de menu en haut-->
-        <div class="row">
-           <div class="col-12">
-               <!-- Déclaration du composant -->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <!--Menu dernière version 2-->
+        <header class="row fixed-top">
+            <section class="col-12">
+                <!-- Déclaration du composant -->
+                <!--BUG navbar-fixed-top ne fonctionne pas, fixed-top fonctionne mais cache des éléments derrière-->
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-                <!-- Titre de la page -->
-                <a class="navbar-brand" href="./index.html">Les Ailes Benessoises</a>
-                <div class="collapse navbar-collapse">
+                    <!-- Titre de la page -->
+                    <a class="navbar-brand" href="./index.html">
+                        <img src="./Pictures/Logo/les-ailes-benessoises-logo 2.png" alt="" width="40px"> 
+                        Les Ailes Benessoises
+                    </a>
 
-                    <!-- Elements du menu -->
-                    <ul class="navbar-nav mr-auto">
+                    <!-- Bouton affiché version Mobile-->
+                    <button
+                    type="button"
+                    class="navbar-toggler"
+                    data-toggle="collapse"
+                    data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
                         <!-- Elements du menu -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">L'association</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Evènements</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Travaux</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Adresse</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Rechercher</button>
-                    </form>
-                </div>
-            </nav>
-           </div>
-        </div>
-        
-        <!--TODO Mise à jour des dates travaux dans les cards
-            Page travaux Step by step (10 steps)-->
-        <div class="row">
-            <h2 class="col-12">Les travaux en dix étapes...</h2>
-            <!--Step 1-->
-            <div class="col-12 col-md-4">
+                        <ul class="navbar-nav mr-auto">
+                            <!-- Elements du menu -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html">L'association</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./evenement.html">Evènements</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./travaux.html">Travaux</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </section>
+        </header>
+        <main class="row">
+            <h2 class="col-12">La réhabilitation du Moulin en dix phases</h2>
+            <p>Juillet 2017 à Décembre 2019</p>
+            <!--Step 1 ========================================STEP================================================================-->
+            <article class="col-12 col-md-3">
                 <!-- Déclaration du composant -->
                 <div class="card">
-                    <!-- Image située en haut -->
+                    <!--Image-->
                     <img src=./Pictures/Travaux/CardsPictures/Step1.png class="card-img-top" alt="Méditation">
-                    <!-- Corps de la carte -->
-                    <div class="card-body">
+                    <!-- Corps carte -->
+                    <div class="card-body" height ="200">
                         <!-- Titre -->
                         <h5 class="card-title">Phase 1 : Décrépissage</h5>
-                        <!-- Contenu de la carte -->
-                        <p class="card-text">
-                            Juillet Août 2017<br> Avec ou sans soleil les marteaux des piqueurs retentissent
-                        </p>
-                        <a href="#" class="btn btn-secondary">Plus de photos</a>
+                        <!-- Contenu carte -->
+                        <section class="card-text">
+                            <p class="fst-italic">Juillet Août 2017</p>
+                            <p>Avec ou sans soleil les marteaux des piqueurs retentissent</p>
+                        </section>
+                        <!--No Bt-->
                     </div>
                 </div>
-            </div>
-            <!--Step 2-->
-            <div class="col-12 col-md-4">
+            </article>
+            <!--Step 2 ========================================STEP================================================================-->
+            <article class="col-12 col-md-3">
                 <!-- Déclaration du composant -->
                 <div class="card">
-                    <!-- Image située en haut -->
+                    <!--Image-->
                     <img src=./Pictures/Travaux/CardsPictures/Step2.jpg class="card-img-top" alt="Méditation">
-                    <!-- Corps de la carte -->
+                    <!-- Corps carte -->
                     <div class="card-body">
                         <!-- Titre -->
                         <h5 class="card-title">Phase 2 : Démontage du toit provisoire</h5>
-                        <!-- Contenu de la carte -->
-                        <p class="card-text">
-                            Août 2017. <br> Démontage du toit...
-                        </p>
-                        <a href="#" class="btn btn-secondary">Plus de photos</a>
+                        <!-- Contenu carte -->
+                        <section class="card-text">
+                            <p class="fst-italic">Août 2017</p>
+                            <p>Démontage du toit...</p>
+                        </section>
+                        <!--No Bt-->
                     </div>
                 </div>
-            </div>
-            <!--Step 3-->
-            <div class="col-12 col-md-4">
+            </article>
+            <!--Step 3 ========================================STEP================================================================-->
+            <article class="col-12 col-md-3">
                 <!-- Déclaration du composant -->
                 <div class="card">
-                    <!-- Image située en haut -->
+                    <!--Image-->
                     <img src=./Pictures/Travaux/CardsPictures/Step3.jpg class="card-img-top" alt="Méditation">
-                    <!-- Corps de la carte -->
+                    <!-- Corps carte -->
                     <div class="card-body">
                         <!-- Titre -->
                         <h5 class="card-title">Phase 3 : Pierres ouvertures & couronnement, carrelage, consolidation tour, 
                             enduits primaires</h5>
-                        <!-- Contenu de la carte -->
-                        <p class="card-text">
-                            Septembre 2017 <br> Remplacement des pierres des ouvertures et du couronnement et carrelage 
-                            Entreprise Maçonnerie SGRP) et Consolidation de la tour ainsi que Réalisation des enduits 
-                            primaires (Chantier Formation Nouvelle Chance (AFPA))
-                        </p>
-                        <a href="#" class="btn btn-secondary">Plus de photos</a>
+                        <!-- Contenu carte -->
+                        <section class="card-text">
+                            <p class="fst-italic">Septembre 2017</p>
+                            <p>Remplacement des pierres des ouvertures et du couronnement et carrelage 
+                                Entreprise Maçonnerie SGRP) et Consolidation de la tour ainsi que Réalisation des enduits 
+                                primaires (Chantier Formation Nouvelle Chance (AFPA))
+                            </p>
+                        </section>
+                        <!--No Bt-->
                     </div>
                 </div>
-            </div>
-            <!--Step 4-->
-            <div class="col-12 col-md-4">
+            </article>
+            <!--Step 4 ========================================STEP================================================================-->
+            <article class="col-12 col-md-3">
                 <!-- Déclaration du composant -->
                 <div class="card">
-                    <!-- Image située en haut -->
+                    <!--Image-->
                     <img src=./Pictures/Travaux/CardsPictures/Step4.jpg class="card-img-top" alt="Méditation">
-                    <!-- Corps de la carte -->
+                    <!-- Corps carte -->
                     <div class="card-body">
                         <!-- Titre -->
                         <h5 class="card-title">Phase 4 : Escaliers et meules</h5>
-                        <!-- Contenu de la carte -->
-                        <p class="card-text">
-                            Février 2018<br> Pose des escaliers et planchers (Entreprise CROIX) avec incorporation des 2 paires de meules.
-                        </p>
-                        <a href="#" class="btn btn-secondary">Plus de photos</a>
+                        <!-- Contenu carte -->
+                        <section class="card-text">
+                            <p class="fst-italic">Février 2018</p>
+                            <p>Pose des escaliers et planchers (Entreprise CROIX) avec incorporation des 2 paires de meules.</p>
+                        </section>
+                        <!--Bouton Plus de photos-->
+                        <a type="button" class="btn btn-outline-primary" href="./morePictures.html#phase4">Plus de photos</a>
                     </div>
                 </div>
-            </div>
-            <!--Step 5-->
-            <div class="col-12 col-md-4">
+            </article>
+            <!--Step 5 ========================================STEP================================================================-->
+            <article class="col-12 col-md-3">
                 <!-- Déclaration du composant -->
                 <div class="card">
-                    <!-- Image située en haut -->
+                    <!--Image-->
                     <img src=./Pictures/Travaux/CardsPictures/Step5.jpg class="card-img-top" alt="Méditation">
-                    <!-- Corps de la carte -->
+                    <!-- Corps carte -->
                     <div class="card-body">
                         <!-- Titre -->
                         <h5 class="card-title">Phase 5 : Machinerie & toiture</h5>
-                        <!-- Contenu de la carte -->
-                        <p class="card-text">
-                            Mai Juin 2018<br> Préparation, arrivée et montage sur site de la machinerie et toiture (Entreprise CROIX)
-                        </p>
-                        <a href="#" class="btn btn-secondary">Plus de photos</a>
+                        <!-- Contenu carte -->
+                        <section class="card-text">
+                            <p class="fst-italic">Mai Juin 2018</p>
+                            <p>Préparation, arrivée et montage sur site de la machinerie et toiture (Entreprise CROIX)</p>
+                        </section>
+                        <!--Bouton Plus de photos-->
+                        <a type="button" class="btn btn-outline-primary" href="./morePictures.html#phase5">Plus de photos</a>
+
+
                     </div>
                 </div>
-            </div>
-            <!--Step 6-->
-            <div class="col-12 col-md-4">
+            </article>
+            <!--Step 6 ========================================STEP================================================================-->
+            <article class="col-12 col-md-3">
                 <!-- Déclaration du composant -->
                 <div class="card">
-                    <!-- Image située en haut -->
+                    <!--Image-->
                     <img src=./Pictures/Travaux/CardsPictures/Step6.jpg class="card-img-top" alt="Méditation">
-                    <!-- Corps de la carte -->
+                    <!-- Corps carte -->
                     <div class="card-body">
                         <!-- Titre -->
                         <h5 class="card-title">Phase 6 : Aménagements extérieurs</h5>
-                        <!-- Contenu de la carte -->
-                        <p class="card-text">
-                            Mai Juin 2018<br> Aménagements extérieurs (« COP DE MAN »)
-                        </p>
-                        <a href="#" class="btn btn-secondary">Plus de photos</a>
+                        <!-- Contenu carte -->
+                        <section class="card-text">
+                            <p class="fst-italic">Mai Juin 2018</p>
+                            <p>Aménagements extérieurs (« COP DE MAN »)</p>
+                        </section>
+                        <!--No Bt-->
                     </div>
                 </div>
-            </div>
-            <!--Step 7-->
-            <div class="col-12 col-md-4">
+            </article>
+            <!--Step 7 ========================================STEP================================================================-->
+            <article class="col-12 col-md-3">
                 <!-- Déclaration du composant -->
                 <div class="card">
-                    <!-- Image située en haut -->
+                    <!--Image-->
                     <img src=./Pictures/Travaux/CardsPictures/Step7.jpg class="card-img-top" alt="Méditation">
-                    <!-- Corps de la carte -->
+                    <!-- Corps carte -->
                     <div class="card-body">
                         <!-- Titre -->
                         <h5 class="card-title">Phase 7 : Couche d’enduit de finition</h5>
-                        <!-- Contenu de la carte -->
-                        <p class="card-text">
-                            15 juin 2018<br> Couche d’enduit de finition (Entreprise CORREIA)
-                        </p>
-                        <a href="#" class="btn btn-secondary">Plus de photos</a>
+                        <!-- Contenu carte -->
+                        <section class="card-text">
+                            <p class="fst-italic">15 juin 2018</p>
+                            <p>Couche d’enduit de finition (Entreprise CORREIA)</p>
+                        </section>
+                        <!--No Bt-->
                     </div>
                 </div>
-            </div>
-            <!--Step 8-->
-            <div class="col-12 col-md-4">
+            </article>
+            <!--Step 8 ========================================STEP================================================================-->
+            <article class="col-12 col-md-3">
                 <!-- Déclaration du composant -->
                 <div class="card">
-                    <!-- Image située en haut -->
+                    <!--Image-->
                     <img src=./Pictures/Travaux/CardsPictures/Step8.jpg class="card-img-top" alt="Méditation">
-                    <!-- Corps de la carte -->
+                    <!-- Corps carte -->
                     <div class="card-body">
                         <!-- Titre -->
                         <h5 class="card-title">Phase 8 : Mise en place du toit et des ailes!</h5>
-                        <!-- Contenu de la carte -->
-                        <p class="card-text">
-                            7 juillet 2018 <br>
-                        </p>
-                        <a href="#" class="btn btn-secondary">Plus de photos</a>
+                        <!-- Contenu carte -->
+                        <section class="card-text">
+                            <p class="fst-italic">7 juillet 2018</p>
+                            <p></p>
+                        </section>
+                        <!--Bouton Plus de photos-->
+                        <a type="button" class="btn btn-outline-primary" href="./morePictures.html#phase8">Plus de photos</a>
                     </div>
                 </div>
-            </div>
-            <!--Step 9-->
-            <div class="col-12 col-md-4">
+            </article>
+            <!--Step 9 ========================================STEP================================================================-->
+            <article class="col-12 col-md-3">
                 <!-- Déclaration du composant -->
                 <div class="card">
-                    <!-- Image située en haut -->
+                    <!--Image-->
                     <img src=./Pictures/Travaux/CardsPictures/Step9.jpg class="card-img-top" alt="Méditation">
-                    <!-- Corps de la carte -->
+                    <!-- Corps carte -->
                     <div class="card-body">
                         <!-- Titre -->
                         <h5 class="card-title">Phase 9 : aménagement et terrassement autour du four et du moulin</h5>
-                        <!-- Contenu de la carte -->
-                        <p class="card-text">
-                            Oct 2018<br>
-                        </p>
-                        <a href="#" class="btn btn-secondary">Plus de photos</a>
+                        <!-- Contenu carte -->
+                        <section class="card-text">
+                            <p class="fst-italic">Octobre 2018</p>
+                            <p></p>
+                        </section>
+                        <!--No Bt-->
                     </div>
                 </div>
-            </div>
-            <!--Step 10-->
-            <div class="col-12 col-md-4">
+            </article>
+            <!--Step 10 ========================================STEP================================================================-->
+            <article class="col-12 col-md-3">
                 <!-- Déclaration du composant -->
                 <div class="card">
-                    <!-- Image située en haut -->
+                    <!--Image-->
                     <img src=./Pictures/Travaux/CardsPictures/Step10.jpg class="card-img-top" alt="Méditation">
-                    <!-- Corps de la carte -->
+                    <!-- Corps carte -->
                     <div class="card-body">
                         <!-- Titre -->
                         <h5 class="card-title">Phase 10 : Aménagement et installation de la machinerie intérieure</h5>
-                        <!-- Contenu de la carte -->
-                        <p class="card-text">
-                            Déc 2018<br> Aménagement et installation de la machinerie intérieure
-                        </p>
-                        <a href="#" class="btn btn-secondary">Plus de photos</a>
+                        <!-- Contenu carte -->
+                        <section class="card-text">
+                            <p class="fst-italic">Décembre 2018</p>
+                            <p>Aménagement et installation de la machinerie intérieure</p>
+                        </section>
+                        <!--No Bt-->
                     </div>
                 </div>
-            </div>                                                                        
-       </div>
+            </article>                                                                        
+       </main>
     </div>
 </body>
+<footer class="text-center">
+    <h1 class="h4 pt-4">Nos Sponsors</h1>
+    <ul class="list-inline">
+        <li class="list-inline-item"><img src="./Pictures/Sponsors/Amplifon.png" class="rounded float-left" alt="Amplifon" width="150px"></li>
+        <li class="list-inline-item"><img src="./Pictures/Sponsors/Audika.jpg" class="rounded float-left" alt="Audika" width="150px"></li>
+        <li class="list-inline-item"><img src="./Pictures/Sponsors/ecouter_voir.jpg" class="rounded float-left" alt="Ecouter Voir" width="150px"></li>
+        <li class="list-inline-item"><img src="./Pictures/Sponsors/entendre.jpg" class="rounded float-left" alt="Entendre" width="150px"></li>
+        <li class="list-inline-item"><img src="./Pictures/Sponsors/Mathio.jpg" class="rounded float-left" alt="Mathio Centrale d'optique et d'audition" width="150px"></li>
+        <li class="list-inline-item"><img src="./Pictures/Sponsors/Sonance.jpg" class="rounded float-left" alt="Sonance Optiques et Audition mutuamistes" width="150px"></li>
+    </ul>
+</footer>
+ <!--Script Menu Sandwich version mobile-->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
 </html>
