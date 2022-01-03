@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="Adhérer aux ailes benessoises : particuliers et mécènes" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Adhésion Association Les Ailes Benessoises</title>
+    <meta name="Adhérer aux ailes benessoises : particuliers et mécènes">
 </head>
 <body class="backgroundMain">
     <div class="container-fluid">
@@ -15,11 +16,10 @@
         <header class="row fixed-top">
             <section class="col-12">
                 <!-- Déclaration du composant -->
-                <!--BUG navbar-fixed-top ne fonctionne pas, fixed-top fonctionne mais cache des éléments derrière-->
                 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
                     <!-- Titre de la page -->
-                    <a class="navbar-brand" href="./index.html">
+                    <a class="navbar-brand ps-2" href="./index.html">
                         <img src="./Pictures/Logo/les-ailes-benessoises-logo 2.png" alt="" width="40px"> 
                         Les Ailes Benessoises
                     </a>
@@ -64,19 +64,16 @@
 
         <!--Page accueil-->
         
-            <div class="row">
-                
+            <div class="row">                
                <article class="col-12 col-md-6">
                    <h1>Devenir adhérent</h1>
                    <h2>Adhésion et renouvellement d'adhésion 2022</h2>
-
-                        <!--Saisie Adresse Email-->
+                        <!--Email input-->
                     <section class="mb-3 margin">
                         <label for="EmailAdherant" class="form-label">Saisissez votre adresse Email :</label>
                         <input type="email" class="form-control" id="EmailAdherant" placeholder="name@example.com">
                     </section>
-
-                        <!--Selection adhésion-->
+                        <!--Abn choice-->
                     <section class="mb-3 margin">
                         <select class="form-select" aria-label="SelectAdhesion">
                             <option selected>Selectionnez type adhésion</option>
@@ -106,8 +103,7 @@
                                 Paiement en espèces à remettre en main propre au  38 rue fleur 40180 Benèsse Les Dax
                             </label>
                         </div>
-                    </section>
-                    
+                    </section>                    
                         <!--Texte libre-->
                     <section class="mb-3 margin">
                         <label for="CommentaireAdherent" class="form-label">Commentaires :</label>
@@ -118,15 +114,16 @@
                             vous donnera droit à une défiscalisation de 66% des montants versés.
                         </p>
                     </section>
-                    <button type="button" class="btn btn-outline-primary margin">Confirmez votre adhésion</button>
-
+                    <section class = "text-center py-3">
+                        <button type="button" class="btn btn-primary margin">Confirmez votre adhésion</button>
+                    </section>                    
                </article>
            </div>
         </div> 
     </div>
 </body>
 <footer class="text-center FooterBackGround">
-    <h1 class="h4 pt-4">Nos Sponsors</h1>
+    <h2 class="h4 pt-4">Nos Sponsors</h2>
     <ul class="list-inline">
         <li class="list-inline-item"><img src="./Pictures/Sponsors/Amplifon.png" class="rounded float-left" alt="Amplifon" width="150px"></li>
         <li class="list-inline-item"><img src="./Pictures/Sponsors/Audika.jpg" class="rounded float-left" alt="Audika" width="150px"></li>
